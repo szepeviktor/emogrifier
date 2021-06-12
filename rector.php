@@ -96,14 +96,12 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $services->set(SimplifyMirrorAssignRector::class);
     $services->set(RemoveOverriddenValuesRector::class);
     $services->set(RemoveUnusedPrivatePropertyRector::class);
-    $services->set(RemoveUnusedPrivateConstantRector::class);
     $services->set(RemoveUnusedPrivateMethodRector::class);
     $services->set(RemoveCodeAfterReturnRector::class);
     $services->set(RemoveDeadConstructorRector::class);
     $services->set(RemoveDeadReturnRector::class);
     $services->set(RemoveDeadIfForeachForRector::class);
     $services->set(RemoveAndTrueRector::class);
-    $services->set(RemoveDefaultArgumentValueRector::class);
     $services->set(RemoveConcatAutocastRector::class);
     $services->set(SimplifyUselessVariableRector::class);
     $services->set(RemoveDelegatingParentCallRector::class);
