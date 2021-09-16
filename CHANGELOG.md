@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ### Added
 
 ### Changed
+- Only support an operator nesting level up to 69 (#1113)
 - Upgrade to PHPUnit 9 (#1112)
 
 ### Deprecated
