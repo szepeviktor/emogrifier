@@ -540,7 +540,7 @@ class CssInliner extends AbstractHtmlProcessor
                 $matches
             )
         ) {
-            [$fullMatch, $atRuleAndFollowingWhitespace, $atRuleName] = $matches;
+            list($fullMatch, $atRuleAndFollowingWhitespace, $atRuleName) = $matches;
 
             if (\strtolower($atRuleName) === 'import') {
                 $importRules .= $atRuleAndFollowingWhitespace;
