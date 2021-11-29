@@ -138,6 +138,7 @@ jobs:
           else
             DEPENDENCIES='';
           fi;
+          composer remove --dev --no-update slevomat/coding-standard
           composer install --no-progress
           composer update --with-dependencies --no-progress "${DEPENDENCIES}";
           composer show;
