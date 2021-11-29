@@ -199,7 +199,7 @@ class CssInliner extends AbstractHtmlProcessor
         }
 
         $cssWithoutComments = $this->removeCssComments($combinedCss);
-        list($cssWithoutCommentsCharsetOrImport, $cssImportRules
+        list($cssWithoutCommentsCharsetOrImport, $cssImportRules)
             = $this->extractImportAndCharsetRules($cssWithoutComments);
         list($cssWithoutCommentsOrUninlinableAtRules, $cssAtRules)
             = $this->extractUninlinableCssAtRules($cssWithoutCommentsCharsetOrImport);
