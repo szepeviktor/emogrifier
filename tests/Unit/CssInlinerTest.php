@@ -26,7 +26,7 @@ final class CssInlinerTest extends TestCase
     /**
      * @var string Common HTML markup with a variety of elements and attributes for testing with
      */
-    private const COMMON_TEST_HTML = '
+    const COMMON_TEST_HTML = '
         <html>
             <body>
                 <p class="p-1"><span>some text</span></p>
@@ -58,7 +58,7 @@ final class CssInlinerTest extends TestCase
      * selection of at-rules which have no special handling by `CssInliner` but should be passed through and placed in a
      * `<style>` element unmodified, for testing that and testing around
      */
-    private const BLACK_BOX_AT_RULES = [
+    const BLACK_BOX_AT_RULES = [
         '@font-face' => '
             @font-face {
               font-family: "Foo Sans";
