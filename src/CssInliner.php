@@ -577,7 +577,7 @@ class CssInliner extends AbstractHtmlProcessor
                 $matches
             )
         ) {
-            [$fullMatch, $atRuleName] = $matches;
+            list($fullMatch, $atRuleName) = $matches;
 
             if ($this->isValidAtRule($atRuleName, $fullMatch)) {
                 $atRules .= $fullMatch;
@@ -1186,7 +1186,7 @@ class CssInliner extends AbstractHtmlProcessor
      */
     private function replaceUnmatchableNotComponent(array $matches): string
     {
-        [$notComponentWithAnyPrecedingCombinator, $anyPrecedingCombinator, $notArgumentInBrackets] = $matches;
+        list($notComponentWithAnyPrecedingCombinator, $anyPrecedingCombinator, $notArgumentInBrackets) = $matches;
 
         if ($this->hasUnsupportedPseudoClass($notArgumentInBrackets)) {
             return $anyPrecedingCombinator !== '' ? $anyPrecedingCombinator . '*' : '';
