@@ -28,22 +28,22 @@ class CssInliner extends AbstractHtmlProcessor
     /**
      * @var int
      */
-    private const CACHE_KEY_CSS = 0;
+    const CACHE_KEY_CSS = 0;
 
     /**
      * @var int
      */
-    private const CACHE_KEY_SELECTOR = 1;
+    const CACHE_KEY_SELECTOR = 1;
 
     /**
      * @var int
      */
-    private const CACHE_KEY_CSS_DECLARATIONS_BLOCK = 2;
+    const CACHE_KEY_CSS_DECLARATIONS_BLOCK = 2;
 
     /**
      * @var int
      */
-    private const CACHE_KEY_COMBINED_STYLES = 3;
+    const CACHE_KEY_COMBINED_STYLES = 3;
 
     /**
      * This regular expression pattern will match any uninlinable at-rule with nested statements, along with any
@@ -54,7 +54,7 @@ class CssInliner extends AbstractHtmlProcessor
      *
      * @var string
      */
-    private const UNINLINABLE_AT_RULE_MATCHER
+    const UNINLINABLE_AT_RULE_MATCHER
         = '/(@(?!media\\b)[\\w\\-]++)[^\\{]*+(\\{[^\\{\\}]*+(?:(?2)[^\\{\\}]*+)*+\\})\\s*+/i';
 
     /**
@@ -65,7 +65,7 @@ class CssInliner extends AbstractHtmlProcessor
      *
      * @var string
      */
-    private const PSEUDO_CLASS_MATCHER
+    const PSEUDO_CLASS_MATCHER
         = 'empty|(?:first|last|nth(?:-last)?+|only)-(?:child|of-type)|not\\([[:ascii:]]*\\)';
 
     /**
@@ -74,14 +74,14 @@ class CssInliner extends AbstractHtmlProcessor
      *
      * @var string
      */
-    private const OF_TYPE_PSEUDO_CLASS_MATCHER = '(?:first|last|nth(?:-last)?+|only)-of-type';
+    const OF_TYPE_PSEUDO_CLASS_MATCHER = '(?:first|last|nth(?:-last)?+|only)-of-type';
 
     /**
      * regular expression component to match a selector combinator
      *
      * @var string
      */
-    private const COMBINATOR_MATCHER = '(?:\\s++|\\s*+[>+~]\\s*+)(?=[[:alpha:]_\\-.#*:\\[])';
+    const COMBINATOR_MATCHER = '(?:\\s++|\\s*+[>+~]\\s*+)(?=[[:alpha:]_\\-.#*:\\[])';
 
     /**
      * @var bool[]

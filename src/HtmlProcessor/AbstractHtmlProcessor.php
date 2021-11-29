@@ -16,12 +16,12 @@ abstract class AbstractHtmlProcessor
     /**
      * @var string
      */
-    protected const DEFAULT_DOCUMENT_TYPE = '<!DOCTYPE html>';
+    const DEFAULT_DOCUMENT_TYPE = '<!DOCTYPE html>';
 
     /**
      * @var string
      */
-    protected const CONTENT_TYPE_META_TAG = '<meta http-equiv="Content-Type" content="text/html; charset=utf-8">';
+    const CONTENT_TYPE_META_TAG = '<meta http-equiv="Content-Type" content="text/html; charset=utf-8">';
 
     /**
      * @var string Regular expression part to match tag names that PHP's DOMDocument implementation is not aware are
@@ -30,7 +30,7 @@ abstract class AbstractHtmlProcessor
      *
      * @see https://bugs.php.net/bug.php?id=73175
      */
-    protected const PHP_UNRECOGNIZED_VOID_TAGNAME_MATCHER = '(?:command|embed|keygen|source|track|wbr)';
+    const PHP_UNRECOGNIZED_VOID_TAGNAME_MATCHER = '(?:command|embed|keygen|source|track|wbr)';
 
     /**
      * @var \DOMDocument|null
