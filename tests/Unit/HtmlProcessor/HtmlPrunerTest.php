@@ -421,7 +421,7 @@ final class HtmlPrunerTest extends TestCase
      */
     public function removeRedundantClassesAfterCssInlinedProvidesFluentInterface(): void
     {
-        [$subject, $cssInliner] = $this->buildSubjectAndCssInlinerWithCssInlined('<html></html>', '');
+        list($subject, $cssInliner) = $this->buildSubjectAndCssInlinerWithCssInlined('<html></html>', '');
 
         $result = $subject->removeRedundantClassesAfterCssInlined($cssInliner);
 
@@ -499,7 +499,7 @@ final class HtmlPrunerTest extends TestCase
         string $css,
         array $classesExpectedToBeRemoved = []
     ): void {
-        [$subject, $cssInliner] = $this->buildSubjectAndCssInlinerWithCssInlined('<html>' . $html . '</html>', $css);
+        list($subject, $cssInliner) = $this->buildSubjectAndCssInlinerWithCssInlined('<html>' . $html . '</html>', $css);
 
         $subject->removeRedundantClassesAfterCssInlined($cssInliner);
 
@@ -560,7 +560,7 @@ final class HtmlPrunerTest extends TestCase
         string $css,
         array $classesToBeKept = []
     ): void {
-        [$subject, $cssInliner] = $this->buildSubjectAndCssInlinerWithCssInlined('<html>' . $html . '</html>', $css);
+        list($subject, $cssInliner) = $this->buildSubjectAndCssInlinerWithCssInlined('<html>' . $html . '</html>', $css);
 
         $subject->removeRedundantClassesAfterCssInlined($cssInliner);
 
